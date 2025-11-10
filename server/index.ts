@@ -70,10 +70,8 @@ app.use((req, res, next) => {
   // Serve the app on the specified PORT (default: 5000)
     // Serve the app on the specified PORT (default: 5000)
 const port = parseInt(process.env.PORT || "5000", 10);
-
-// 👇 Use only "localhost" — never "0.0.0.0" on macOS
-const host = "localhost";
+const host = "127.0.0.1"; // safer than localhost or 0.0.0.0 on macOS
 
 server.listen(port, host, () => {
-  log(`✅ Server running at http://${host}:${port}`);
+  log(`Server running at http://${host}:${port}`);
 });

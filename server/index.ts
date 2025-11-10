@@ -69,11 +69,11 @@ app.use((req, res, next) => {
 
   // Serve the app on the specified PORT (default: 5000)
     // Serve the app on the specified PORT (default: 5000)
-  const port = parseInt(process.env.PORT || "5000", 10);
-  const host = "127.0.0.1"; // ✅ do NOT use 0.0.0.0 or localhost
+    const port = parseInt(process.env.PORT || "5000", 10);
+  const host = "127.0.0.1"; // ✅ absolutely required on macOS + Node 22
 
   try {
-    server.listen(port, host, () => {
+    server.listen({ port, host }, () => {
       log(`✅ Server running at http://${host}:${port}`);
     });
   } catch (err) {

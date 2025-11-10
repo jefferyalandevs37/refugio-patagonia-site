@@ -69,11 +69,10 @@ app.use((req, res, next) => {
 
   // Serve the app on the specified PORT (default: 5000)
     // Serve the app on the specified PORT (default: 5000)
-const port = parseInt(process.env.PORT || "5173", 10);
-const host =
-  process.env.REPL_ID || process.env.REPL_SLUG
-    ? "0.0.0.0"
-    : "127.0.0.1"; // use local host on macOS, 0.0.0.0 on Replit
+const port = parseInt(process.env.PORT || "5000", 10);
+const host = "127.0.0.1";
+
+console.log("Listening on", host, port); // debug line
 
 server.listen(port, host, () => {
   log(`Server running at http://${host}:${port}`);

@@ -69,7 +69,7 @@ app.use((req, res, next) => {
 
   // Serve the app on the specified PORT (default: 5000)
     // Serve the app on the specified PORT (default: 5000)
-const port = parseInt(process.env.PORT || "5000", 10);
+const port = parseInt(process.env.PORT || "5173", 10);
 const host =
   process.env.REPL_ID || process.env.REPL_SLUG
     ? "0.0.0.0"

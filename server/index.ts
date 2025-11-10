@@ -74,6 +74,7 @@ const host = "127.0.0.1";
 
 console.log("Listening on", host, port); // debug line
 
-server.listen(port, host, () => {
-  log(`Server running at http://${host}:${port}`);
+server.listen(port, () => {
+  log(`Server running at http://127.0.0.1:${port}`);
 });
+
